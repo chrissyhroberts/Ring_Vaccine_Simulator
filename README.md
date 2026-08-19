@@ -2,6 +2,8 @@
 
 Simulation framework for evaluating alternative ring vaccination trial designs.
 
+The primary output is the estimated number of rings required to achieve a specified level of statistical precision under each trial design.
+
 **Authors**
 - Chrissy h. Roberts
 - Anton Camacho
@@ -128,6 +130,70 @@ ring_id,index_case_id,eligible_for_vaccine,direct_contact,contact_of_contact
 ```
 
 This represents two rings containing three and two primary contacts respectively.
+
+---
+
+# Outputs
+
+The models generate simulated trial datasets and summary results describing the expected performance of each trial design.
+
+Outputs include:
+
+## Trial-level simulation results
+
+For each simulated trial, the models record:
+
+- number of vaccination rings recruited
+- number of eligible primary contacts enrolled
+- allocation to vaccine and control groups
+- simulated infection outcomes
+- observed vaccine effect estimates
+- whether the trial achieved the predefined precision target
+
+These outputs allow assessment of the probability that a proposed trial design will meet its objectives.
+
+---
+
+## Design performance summaries
+
+Across repeated simulations, the models summarise:
+
+- required number of rings
+- required number of participants
+- number of expected infection events
+- probability of achieving target precision
+- distribution of estimated vaccine efficacy
+- uncertainty around trial estimates
+
+---
+
+## Comparison between designs
+
+The framework allows direct comparison of:
+
+### Individual randomisation
+
+Outputs describe:
+
+- number of rings required to recruit sufficient individuals
+- expected number of vaccinated and control participants
+- precision of individual-level vaccine effect estimates
+
+### Ring randomisation
+
+Outputs describe:
+
+- number of rings required as independent randomisation units
+- expected number of participants within vaccinated and control rings
+- impact of ring-level clustering on precision
+
+---
+
+## Interpretation
+
+The outputs are intended to support trial design decisions by showing how alternative randomisation strategies perform under realistic outbreak conditions.
+
+They are not forecasts of outbreak size or transmission. They are simulations of trial performance under specified epidemiological assumptions.
 
 ---
 
